@@ -1,0 +1,33 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		/*
+		Console.WriteLine("Evaluar si puede conducir o no");
+		
+		bool carnet = true;
+
+		if(carnet){
+			Console.WriteLine("Puedes conducir vehiculos");
+		}else{
+			Console.WriteLine("No puedes conducir vehiculos");
+		}
+		*/
+		
+		Console.WriteLine("Ingresar edad : ");
+		int edad = Int32.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Tienes carnet ?: ");
+		string carnet = Console.ReadLine();
+		
+		if(edad >=18 && carnet =="si"){
+			
+			Console.WriteLine("Puedes conducir");
+		}else{
+			Console.WriteLine("No Puedes conducir");
+		}
+	}
+
+}
