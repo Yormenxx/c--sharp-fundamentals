@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		Console.WriteLine(Suma(1,2));
+		
+	}
+	
+	private static double Suma(int num1, double num2, double num3 = 0){
+		
+		return num1 + num2 + num3;
+	
+	}
+}
