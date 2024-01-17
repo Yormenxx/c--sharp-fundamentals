@@ -1,0 +1,36 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		Console.WriteLine("Elije el tipo de vehiculo (coche, moto, avion)");
+
+		string medioTransporte = Console.ReadLine();
+		
+		switch(medioTransporte){
+		
+			case "coche":
+				
+				Console.WriteLine("Manejas un coche");
+				break;
+				
+			case "moto":
+				
+				Console.WriteLine("Manejas una moto");
+				break;
+				
+			case "avion":
+				
+				Console.WriteLine("Manejas un avión");
+				break;
+				
+			case default:
+				Console.WriteLine("transporte no contemplado");
+				break;
+		
+		}
+	}
+
+}
