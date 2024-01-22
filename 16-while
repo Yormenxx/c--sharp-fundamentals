@@ -1,0 +1,42 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		Console.WriteLine("Adivina el numero");
+		
+		
+		Random numero = new Random();
+		
+		int aleatorio = numero.Next(0,100);
+	
+		int intentos = 0;
+		
+		int minumero = 101;
+		
+		while(aleatorio !=minumero){
+			
+			intentos++;
+			
+			Console.WriteLine("Escribe un numero");
+			
+			minumero = int.Parse(Console.ReadLine());
+			
+			if(minumero > aleatorio){
+			
+				Console.WriteLine("El numero es más bajo");
+			}else{
+			
+				Console.WriteLine("El numero es más alto");
+			
+			}
+			
+		}
+		
+		Console.WriteLine($"El numero correcto es {minumero}, tus intentos fueron {intentos}");
+
+	}
+
+}
