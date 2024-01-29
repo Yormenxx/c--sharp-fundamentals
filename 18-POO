@@ -1,1 +1,46 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	
+		Circulo circuloPrimero;
+		
+		circuloPrimero = new Circulo();
+	
+		Console.WriteLine(circuloPrimero.areaCirculo(5));
+		
+		
+		convertirDinero obj = new convertirDinero();
+		
+		Console.WriteLine(obj.convertirEuro(50));
+	}
+	
+			class Circulo{
+			
+				private const double pi = 3.1414;
+			
+			
+				public double areaCirculo(int radio){
+			
+					return pi * radio * radio;
+			
+				}
+			}
+	
+	
+		class convertirDinero{
+			
+			const double euro = 1.253;
+			
+			public double convertirEuro(int cantidad){
+					
+				return cantidad * euro;
+			
+			}
+		
+			
+		}
 
+}
