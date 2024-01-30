@@ -44,3 +44,64 @@ public class Program
 		}
 
 }
+
+
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		
+		Coche coche1 = new Coche();
+		
+		Console.WriteLine(coche1.getRuedas());
+		
+		Coche coche2 = new Coche(4500.35, 2500.4);
+		
+		Console.WriteLine(coche2.getRuedas());
+	}
+	
+	
+			
+	class Coche{
+		
+		public Coche(){
+			
+			ruedas = 4;
+			
+			largo = 2300.5;
+			
+			ancho = 0.800;
+		
+		}
+		
+		public Coche(double largoCoche, double anchoCoche){
+			
+			ruedas = 4;
+
+			largo = largoCoche;
+				
+			ancho = anchoCoche;
+		}
+		
+		public int getRuedas(){
+			
+			return ruedas;
+		}
+	
+		private int ruedas;
+		
+		private double largo;
+		
+		private double ancho;
+		
+		private String tapiceria;
+		
+		private bool refrigeracion;
+	}
+
+}
