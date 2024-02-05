@@ -1,0 +1,30 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+
+		
+		var datos = new [] {"juan","pedro"};
+		
+		Empleados[] arrayEmpleados = new Empleados[2];
+		
+		arrayEmpleados[0]=new Empleados("JUAN","20");
+		
+		arrayEmpleados[1]=new Empleados("Ana","20");
+	}
+	
+	class Empleados{
+	
+		private String nombre;
+		private String edad;
+		
+		public Empleados(String nombre, String edad){
+		
+			this.nombre= nombre;
+			this.edad = edad;
+		}
+	}
+	
+}
