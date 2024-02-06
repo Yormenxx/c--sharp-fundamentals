@@ -1,0 +1,70 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+
+		Caballo babieca = new Caballo("Babieca");
+		
+		Humano juan = new Humano("Juan");
+		
+		Gorila copito = new Gorila("copito");
+		
+		juan.getNombre();
+	}
+	
+	public class Mamiferos{
+		
+		private String nombreserVivo;
+		
+		public Mamiferos(String nombre){
+			nombreserVivo = nombre;
+		}
+	
+			public void respirar(){
+				Console.WriteLine("Soy capaz de respirar");
+			}
+		
+			public void cuidarCrias(){
+				Console.WriteLine("Cuido a mis crias");
+			}
+		
+		public void getNombre(){
+			Console.WriteLine("Nombre del ser vivo es :" + nombreserVivo );
+		}
+
+		
+	}
+
+	public class Caballo : Mamiferos{
+		
+		public Caballo(String nombrecaballo):base(nombrecaballo){
+		
+		}
+		public void galopar(){
+			Console.WriteLine("Puedo galopar");
+		}
+	
+	}
+
+	public class Humano : Mamiferos{
+			
+		public Humano(String nombrehumano):base(nombrehumano){
+		
+		}
+			public void pensar(){
+			Console.WriteLine("Puedo pensar");
+		}
+	}
+
+	public class Gorila : Mamiferos{
+		public Gorila(String nombregorila):base(nombregorila){
+		
+		}
+			public void trepar(){
+			Console.WriteLine("Puedo trepar");
+		}
+	}
+	
+}
