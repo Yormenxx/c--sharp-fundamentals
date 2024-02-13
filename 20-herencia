@@ -68,3 +68,71 @@ public class Program
 	}
 	
 }
+
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+	}
+	
+	class Vehiculo{
+		
+		public Vehiculo(){
+		}
+	
+	
+		public void arrancar(){
+			
+			Console.WriteLine("El vehiculo esta arrancando");
+		}
+		
+		public void paraMotor(){
+		
+			
+			Console.WriteLine("El vehiculo esta Parando el motor");
+		
+		}
+		
+		public virtual void conducir(){
+		
+			
+			Console.WriteLine("El vehiculo se esta conduciendo");
+		
+		}
+	
+	}
+	
+	
+	class Avion : Vehiculo{
+	
+		public Avion(){
+		
+		}
+		
+		public override void conducir(){
+		
+			Console.WriteLine("El Avion se esta conduciendo");
+		}
+	
+	}
+	
+	class Carro: Vehiculo{
+	
+		public Carro(){
+		
+		}
+		
+		public override void conducir(){
+		
+			Console.WriteLine("El Carro se esta conduciendo");
+		}
+	
+	
+	}
+	
+	
+}
