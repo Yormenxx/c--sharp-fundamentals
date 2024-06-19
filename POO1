@@ -1,0 +1,87 @@
+Using System.Runtime.CompilerServices;
+
+namespace Fundamentals
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Coche miCoche = new Coche();
+
+            
+
+            Console.WriteLine(miCoche.getRuedas());
+
+             
+
+            Console.WriteLine(miCoche.getInfoCoche());
+
+            Coche miCoche3 = new Coche(400.5,1.000);
+
+            Console.Write(miCoche3.getInfoCoche());
+
+            miCoche3.setExtras(true, "cuero");
+
+            Console.WriteLine(miCoche3.getExtras());
+        }   
+
+    }
+
+
+    class Coche
+    {
+        private int ruedas;
+
+        private double largo;
+
+        private double ancho;
+
+        private bool climatizador;
+
+        private String tapiceria;
+
+
+        public Coche()
+        {
+            ruedas = 4;
+
+            largo = 2.4;
+
+            ancho = 0.800;
+
+        }
+
+        public Coche(double largoCoche, double anchoCoche)
+        {
+            ruedas = 4;
+
+            largo = largoCoche;
+
+            ancho = anchoCoche; 
+        }
+
+        public int getRuedas()
+        {
+            return ruedas;
+        }
+
+        public void setExtras(bool paramClimatizador, String paraTapiceria)
+        {
+            climatizador = paramClimatizador;
+
+            tapiceria = paraTapiceria;
+        }
+
+        public String getExtras()
+        {
+            return " Climatizador: " +climatizador+ "tapiceria:" +tapiceria ;
+        }
+
+        public String getInfoCoche()
+        {
+            return "Informacion del coche \nruedas: " + ruedas + " largo: " + largo + " ancho: " + ancho;
+            
+        }
+    }
+}
