@@ -1,0 +1,50 @@
+using System.Runtime.CompilerServices;
+
+namespace Fundamentals
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int resultadoSuma = Matemticas.sumar(7, 7);
+            int resultadoResta = Matemticas.restar(10, 7);
+            int resultadoDivision = Matemticas.dividir(103, 7);
+            int resultadoMulti = Matemticas.multiplicar(7, 7);
+
+
+            Console.WriteLine(resultadoMulti);
+
+        }   
+
+
+
+        public static class Matemticas
+        {
+            public static int sumar(int a , int b)
+            {
+                return a + b;
+            }
+
+            public static int multiplicar(int a, int b)
+            {
+                return a * b;
+            }
+
+            public static int restar(int a, int b)
+            {
+                return a - b;
+            }
+
+            public static int dividir(int a, int b)
+            {
+                return a / b;
+            }
+        }
+
+    }
+
+
+
+    
+}
