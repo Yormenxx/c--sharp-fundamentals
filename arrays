@@ -1,0 +1,53 @@
+using System.Runtime.CompilerServices;
+
+namespace Fundamentals
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            int[] miarray = new int[3];
+
+            miarray[0] = 1;
+            miarray[1] = 2; 
+            miarray[2] = 3;
+            miarray[3] = 4;
+
+            // array implicito 
+
+
+            var valores = new[] { 1, 2, 3 };
+
+
+            Empleado[] empleados = new Empleado[3];
+
+            empleados[0] = new Empleado("ana","maria");
+            
+
+        }   
+
+
+        class Empleado
+        {
+            string nombre;
+            string apellido;
+
+            public Empleado(string nombre, string apellido)
+            {
+                this.nombre = nombre;
+                this.apellido = apellido;
+            }
+        }
+
+
+
+
+
+    }
+
+
+
+    
+}
