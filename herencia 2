@@ -1,0 +1,104 @@
+using System.Runtime.CompilerServices;
+
+namespace Fundamentals
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Caballo babieca = new Caballo("caballo1");    
+       
+            Humano juan = new Humano("Juan"); 
+
+
+            gorila gorila1 = new gorila("copito");
+
+
+            babieca.getNombre();
+
+        }   
+
+        class Mamifero
+        {
+            String nombreSerVivo;
+
+            public Mamifero(String nombreSerVivo)
+            {
+                this.nombreSerVivo = nombreSerVivo;
+            }
+
+            public void respirar()
+            {
+                Console.WriteLine("soy un mamifero y puedo respirar");
+            }
+
+            public void cuidarHijos()
+            {
+                Console.WriteLine("Soy un mamifero y cuido crias");
+            }
+
+            public void getNombre()
+            {
+                Console.WriteLine("El nombre del ser vivo es " + this.nombreSerVivo );
+            }
+
+        }
+
+        class Caballo : Mamifero
+        {
+
+            public Caballo(String nombreCaballo):base(nombreCaballo)
+            {
+
+            }
+            public void galopar()
+            {
+                Console.WriteLine("Soy capaz de galopar");
+            }
+
+
+        }
+
+
+        class Humano : Mamifero
+        {
+            public Humano(String nombreHumano):base(nombreHumano)
+            {
+
+            }
+            public void pensar()
+            {
+
+                Console.WriteLine("Soy un humano y soy capaz de pensar");
+
+            }
+
+
+        }
+
+        class gorila : Mamifero
+        {
+
+            public gorila(String nombreGorila) : base(nombreGorila)
+            {
+
+            }
+            public void trepar()
+            {
+                Console.WriteLine("Yo soy capaz de trepar");
+            }
+        }
+
+        
+
+
+
+
+    }
+
+
+
+    
+}
