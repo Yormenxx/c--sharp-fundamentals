@@ -1,0 +1,76 @@
+using System.Timers;
+
+namespace fundamentals
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Coche coche1 = new Coche();
+
+            coche1.arrancarMotor();
+
+            coche1.conducir();
+           
+        }
+
+
+        class Vehiculo {
+
+       
+
+            public void arrancarMotor()
+            {
+                System.Console.WriteLine("El motor esta en funcionamiento");
+            }
+
+            public void pararMotor()
+            {
+                System.Console.WriteLine("El motor se ha detenido");
+
+            }
+
+            public virtual void conducir()
+            {
+                System.Console.WriteLine("Estas conduciendo el vehiculo");  
+            }
+
+        }
+        
+
+        class Avion : Vehiculo
+        {
+
+           
+
+            public override void conducir()
+            {
+                System.Console.WriteLine("El piloto maneja el avion");
+            }
+
+        }
+
+        class Coche : Vehiculo
+        {
+         
+
+            public override void conducir()
+            {
+                System.Console.WriteLine("El conductor maneja el carro");
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+}
