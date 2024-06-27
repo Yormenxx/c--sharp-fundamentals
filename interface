@@ -1,0 +1,87 @@
+using System.Timers;
+
+namespace fundamentals
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Cuadrado cuadrado1 = new Cuadrado(4);
+
+            Console.WriteLine($"{cuadrado1.calcularArea()}");
+
+            Console.WriteLine($"{cuadrado1.calcularPerimetro()}");
+
+
+
+
+
+        }
+
+        public interface IFigura
+        {
+            double calcularArea();
+            double calcularPerimetro();
+        }
+
+        class Cuadrado : IFigura
+        {
+
+            private double lado;
+    
+            public Cuadrado(double lado)
+            {
+                this.lado = lado;   
+            }
+
+
+            public double calcularArea()
+            {
+                return lado * lado;
+            }
+
+            public double calcularPerimetro()
+            {
+                return 4 * lado;
+            }
+
+        }
+
+        class Circulo : IFigura
+        {
+            private double radio;
+            public Circulo(double radio)
+            {
+                this.radio = radio; 
+            }
+
+            public double calcularArea()
+            {
+                return Math.PI * (Math.Pow(radio, 2));
+            }
+
+
+            public double calcularPerimetro()
+            {
+                return 2 * Math.PI * radio;
+            }
+
+
+        }
+
+     
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
