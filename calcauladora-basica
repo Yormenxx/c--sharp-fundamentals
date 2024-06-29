@@ -1,0 +1,62 @@
+using System.Reflection.Metadata.Ecma335;
+
+namespace calculadoraProject
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int num1;
+            int num2;
+            string opt;
+
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Bienvenido a la calculadora en consola");
+            Console.WriteLine("--------------------------------------");
+
+            Console.WriteLine("Ingresa el primer numero: ");
+            num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingresa el segundo numero: ");
+            num2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Qué operacion deseas realizar");
+            Console.WriteLine("Suma(s)----Resta(r)---Multiplicacion(m)---Divsion(d)");
+
+            opt = Console.ReadLine();
+
+           
+           
+            switch (opt)
+            {
+
+                case "s":
+
+                    Console.WriteLine($"El resultado de la suma es: {num1 + num2}");
+                    break;
+
+                case "r":
+
+                    Console.WriteLine($"El resultado de la resta es: {num1 - num2}");
+                    break;
+
+                case "m":
+                    Console.WriteLine($"El resultado de la multiplicacion es: {num1 * num2}");
+                    break;
+
+                case "d":
+                    Console.WriteLine($"El resultado de la division es: {num1 / num2}");
+                    break;
+
+                default:
+                    Console.WriteLine("Opcion digitada incorrecta");
+                    break;
+
+            }
+
+
+
+        }
+    }
+}
