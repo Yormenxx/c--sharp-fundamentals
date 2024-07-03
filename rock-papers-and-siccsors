@@ -1,0 +1,137 @@
+namespace rockPapersScissors
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Welcome to rock, papers and scissors");
+            Console.WriteLine("--------------------------------------");
+
+            Random random = new Random();
+
+            int yourScore = 0;
+            int enemyScore = 0;
+
+            while (enemyScore != 3 && yourScore != 3)
+            {
+
+                Console.WriteLine($"your score is: {yourScore} ---- enemy score is: {enemyScore}");
+                Console.WriteLine("Type r for rock , p for papers and s for scissors");
+
+                string playerChoice = Console.ReadLine();
+
+                int enemyChoice = random.Next(3);
+
+                if (enemyChoice == 0)
+                {
+                    Console.WriteLine("Enemy chose rock");
+
+                    switch (playerChoice)
+                    {
+
+                        case "r":
+                            Console.WriteLine("It is a tie");
+                            break;
+
+                        case "p":
+                            Console.WriteLine("You wins");
+                            yourScore++;
+                            break;
+                        case "s":
+                            Console.WriteLine("You lose");
+                            enemyScore++;
+                            break;
+
+                            //default:
+                            //Console.WriteLine("Enemy wins this round ");
+                            //break;
+                    }
+                }
+                else if (enemyChoice == 1)
+                {
+                    Console.WriteLine("Enemy chose papers");
+
+
+                    switch (playerChoice)
+                    {
+
+                        case "r":
+
+                            Console.WriteLine("You lose");
+                            enemyScore++;
+                            break;
+
+
+                        case "p":
+
+                            Console.WriteLine("It is a tie");
+                            break;
+
+                        case "s":
+
+                            Console.WriteLine("You wins");
+                            yourScore++;
+                            break;
+
+                            //default:
+                            //Console.WriteLine("Enemy wins this round ");
+                            //break;
+
+
+
+
+                    }
+
+                }
+                else if (enemyChoice == 2)
+                {
+
+                    Console.WriteLine("Enemy chose scissors");
+
+                    switch (playerChoice)
+                    {
+
+                        case "r":
+
+                            Console.WriteLine("You wins");
+                            yourScore++;
+                            break;
+                        case "p":
+
+                            Console.WriteLine("You lose");
+                            enemyScore++;
+                            break;
+                        case "s":
+
+                            Console.WriteLine("It is a tie");
+                            break;
+
+
+                    }
+
+
+                }
+
+         
+
+
+
+            }
+            Console.WriteLine("The game has been finalized");
+
+            if (yourScore == 3)
+            {
+                Console.WriteLine("You win");
+            }
+            else
+            {
+                Console.WriteLine("You lose");
+            }
+
+
+
+
+        }
+    }
+}
